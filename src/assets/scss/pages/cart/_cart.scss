@@ -1,0 +1,131 @@
+.cart {
+    &-page {
+        padding-top: 24px;
+        margin-bottom: 24px;
+
+        &__title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 133%;
+            letter-spacing: -0.01em;
+            color: $dark;
+        }
+
+        &__row {
+            margin-top: 24px;
+            display: flex;
+            align-items: flex-start;
+            column-gap: 20px;
+        }
+    }
+
+    &-list{
+        flex: 1 1 auto;
+        background-color: $white;
+        border: 1px solid $gray-300;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+    &-main {
+        border-radius: 6px;
+        padding: 24px 20px;
+        background-color: $white;
+    }
+
+    &-empty {
+        @include center();
+        flex-direction: column;
+        gap: 24px;
+
+        &__content{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        &__title {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        &__button {
+            border-radius: 6px;
+            text-align: center;
+            padding: 12px 28px;
+            background: linear-gradient(180deg, #127fff 0%, #0067ff 100%);
+            font-weight: 500;
+            font-size: 16px;
+            text-align: center;
+            color: $white;
+            @include trn();
+            border: 1px solid transparent;
+
+            &:hover {
+                background: $white;
+                color: $dark;
+                border: 1px solid $primary;
+            }
+        }
+    }
+
+    &-buttons {
+        @include flex(center, space-between);
+    }
+
+    &-back__button {
+        background: linear-gradient(180deg, #127fff 0%, #0067ff 100%);
+        @include flex(center, unset);
+        gap: 9px;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        padding: 9px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 110%;
+        color: $white;
+        @include trn();
+
+        @include hover() {
+            &:hover {
+                background: transparent;
+                color: $primary;
+                border: 1px solid $gray-300;
+
+                path {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+
+    &-removeall__button {
+        background-color: $white;
+        border: 1px solid $gray-300;
+        border-radius: 6px;
+        padding: 9px 16px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: $primary;
+        @include trn();
+
+        @include hover() {
+            &:hover {
+                background-color: $primary;
+                border-color: $primary;
+                color: $white;
+            }
+        }
+    }
+
+
+}

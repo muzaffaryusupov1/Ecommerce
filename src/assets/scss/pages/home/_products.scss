@@ -1,0 +1,112 @@
+.products {
+    margin-top: 20px;
+
+    &-wrapper {
+        border-radius: 6px;
+        background-color: $white;
+        display: flex;
+        height: 257px;
+    }
+
+    &-content {
+        position: relative;
+        width: 250px;
+        height: 100%;
+        padding: 20px;
+
+        &__image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__row {
+            position: relative;
+            @include flex(unset, center);
+            flex-direction: column;
+            height: 100%;
+        }
+
+        &__title {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 26px;
+            letter-spacing: -0.02px;
+            color: $white;
+            margin-bottom: 18px;
+        }
+
+        &__btn {
+            background-color: $white;
+            border-radius: 6px;
+            border: 1px solid $white;
+            padding: 12px 16px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: $dark;
+            @include trn();
+
+            @include hover() {
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &-card {
+        width: 232px;
+        height: 127px;
+        display: flex;
+        border: 1px solid $gray-300;
+
+        &__row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 930px;
+        }
+
+        &__contents {
+            width: 127px;
+            padding: 20px 0 0 16px;
+        }
+
+        &__title {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 19px;
+            color: $dark;
+            margin-bottom: 9px;
+        }
+
+        &__subtitle {
+            display: inline-block;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: $gray-500;
+        }
+
+        &__image {
+            width: 95px;
+            height: 95px;
+            margin-top: 15px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

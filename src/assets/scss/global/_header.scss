@@ -1,0 +1,138 @@
+.header {
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+
+  &-row {
+    @include flex(center, space-between);
+  }
+
+  &-logo {
+    display: flex;
+    gap: 18px;
+  }
+
+  &-mobile__btn {
+    display: none;
+
+    @include media(720) {
+      display: block;
+    }
+  }
+
+  &-search {
+    border: 2px solid $primary;
+    border-radius: 6px;
+    width: 520px;
+    height: 40px;
+    overflow: hidden;
+
+    &__mobile {
+      display: none;
+
+      @include media(720) {
+        @include flex(center, unset);
+        border-radius: 6px;
+        border: 1px solid $gray-300;
+        padding: 9px;
+        margin: 10px 15px;
+      }
+    }
+
+    @include media(920) {
+      width: 350px;
+    }
+
+    @include media(720) {
+      display: none;
+    }
+
+    @include flex(center, unset);
+
+    &__input {
+      flex: 1 1 auto;
+      height: 100%;
+      padding: 0 10px;
+      border: none;
+      font-weight: 400;
+      font-size: 16px;
+      color: $dark;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        color: $gray-500;
+      }
+
+      @include media(920) {
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: 250px;
+      }
+    }
+
+    &__button {
+      width: 100px;
+      height: 100%;
+      background-color: $primary;
+      border-left: 2px solid $primary;
+      @include center();
+      font-weight: 500;
+      font-size: 16px;
+      color: $white;
+      @include trn();
+
+      @include hover() {
+        &:hover {
+          background-color: transparent;
+          color: $primary;
+        }
+      }
+    }
+  }
+
+
+
+  &-button {
+    @include flex(center);
+    flex-direction: column;
+    row-gap: 6px;
+
+    &.profile,
+    &.message {
+      @include media(450) {
+        display: none
+      }
+    }
+
+    &s {
+      @include flex(center);
+      column-gap: 24px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 12px;
+      @include trn();
+    }
+
+    path {
+      @include trn();
+
+    }
+
+    @include hover() {
+      &:hover {
+        span {
+          color: $primary;
+        }
+
+        path {
+          fill: $primary;
+        }
+      }
+
+
+    }
+  }
+}

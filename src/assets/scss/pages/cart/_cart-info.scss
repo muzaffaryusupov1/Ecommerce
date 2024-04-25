@@ -1,0 +1,128 @@
+.cart {
+    &-coupon {
+        width: 280px;
+        border: 1px solid $gray-300;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px 0 rgba(56, 56, 56, 0.1);
+        background-color: $white;
+        padding: 20px 16px;
+
+        &__title {
+            font-weight: 400;
+            font-size: 16px;
+            color: $gray-600;
+            margin-bottom: 10px;
+        }
+
+        &__input {
+            width: 180px;
+            padding: 10px;
+            border: 1px solid $gray-300;
+            background: $white;
+            border-radius: 6px 0 0 6px;
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 16px;
+                color: $gray-500;
+            }
+        }
+
+        &__btn {
+            padding: 10px;
+            border: 1px solid $gray-300;
+            background: $white;
+            border-radius: 0 6px 6px 0;
+            color: $primary;
+            @include trn();
+
+            @include hover() {
+                &:hover {
+                    background: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &-checkout {
+        width: 280px;
+        border: 1px solid $gray-300;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px 0 rgba(56, 56, 56, 0.1);
+        background-color: $white;
+        padding: 0 16px 20px 16px;
+        margin-top: 12px;
+
+
+        &__top {
+            border-bottom: 1px solid $gray-300;
+            padding: 17px 0;
+        }
+
+        &__row {
+            @include flex(center, space-between);
+            padding: 4px;
+
+            &.two {
+                padding-top: 17px;
+            }
+        }
+
+        &__subtotal {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: $gray-600;
+        }
+
+        &__price {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            text-align: right;
+            color: $gray-600;
+
+            &.red {
+                color: $red;
+            }
+
+            &.green {
+                color: $green;
+            }
+        }
+
+        &__total {
+            font-weight: 600;
+            font-size: 16px;
+            color: $dark;
+        }
+
+        &__text {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 140%;
+            letter-spacing: -0.01em;
+            color: $dark;
+        }
+
+        &__btn {
+            border-radius: 8px;
+            padding: 14px 20px;
+            width: 100%;
+            background: $green;
+            font-weight: 500;
+            font-size: 18px;
+            color: $white;
+            margin-top: 9px;
+        }
+
+        &__icons {
+            display: flex;
+            gap: 8px;
+            padding: 20px;
+        }
+    }
+}

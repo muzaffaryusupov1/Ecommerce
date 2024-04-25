@@ -1,0 +1,65 @@
+.checkout-info {
+    &__wrapper {
+        background-color: $white;
+        border: 1px solid $gray-300;
+        height: fit-content;
+        padding: 40px;
+        border-radius: 8px;
+    }
+
+    &__top {
+        margin-bottom: 24px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrap {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__name,
+    &__title,
+    &__pay {
+        margin: 7px 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: $dark;
+    }
+
+    &__input {
+        width: 300px;
+        border: 1px solid $primary;
+        margin: 4px 0;
+        border-radius: 6px;
+        padding: 8px 12px;
+    }
+
+    &__select {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid $primary;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $dark;
+        margin: 10px 0;
+    }
+
+    &__payment {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    &__cash {
+        margin-left: 10px;
+        border: 1px solid $primary;
+        width: 30px;
+        height: 20px;
+    }
+}
