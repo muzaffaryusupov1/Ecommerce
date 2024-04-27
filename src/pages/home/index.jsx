@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import { Banner, Clothes, Offers,  RecommendedList, Smartphones } from './components'
+import { Banner, Offers,  RecommendedList, Smartphones, Tv } from './components'
 import { useDispatch } from 'react-redux'
-import { getBannersList, getCategoriesList, getCategoryRecommendedList, getClothes, getProductOffersList, getProductRecommendedList, getSmartphones } from '../../store/actions/homeActions'
+import { getBannersList, getCategoriesList, getCategoryRecommendedList, getTv, getProductOffersList, getProductRecommendedList, getSmartphones } from '../../store/actions/homeActions'
 import ProductsSection from './components/products/ProductsSection'
 
 function HomePage() {
@@ -14,7 +14,7 @@ function HomePage() {
         dispatch(getProductOffersList())
         dispatch(getCategoryRecommendedList())
         dispatch(getSmartphones())
-        dispatch(getClothes())
+        dispatch(getTv())
     }, [])
 
 
@@ -25,7 +25,7 @@ function HomePage() {
             <ProductsSection/>
            <RecommendedList/>
            <Smartphones/>
-           <Clothes/>
+           <Tv/>
         </div>
     )
 }

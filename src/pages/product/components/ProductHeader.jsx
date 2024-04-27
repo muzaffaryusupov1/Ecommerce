@@ -3,44 +3,29 @@ import { MessageSmallIcon, BasketIcon, StarIcon } from '../../../assets/icons'
 import { useDispatch } from 'react-redux'
 import { addCart } from '../../../store/slices/cart'
 import { addFavorite } from '../../../store/slices/favorite'
+import SliderImages from './SwiperImages'
+import { toast } from 'react-toastify'
 
 function ProductHeader({ product }) {
     const dispatch = useDispatch()
-    const [activeImage, setActiveImage] = useState(product.mainImage)
 
     const handleAdd = () => {
         dispatch(addCart(product))
+        toast.success('Savatga qo\'shildi')
     }
 
     const handleAddOrder = () => {
         dispatch(addFavorite(product))
+        toast.success('Sevimlilarga qo\'shildi')
     }
 
-    const handleImage = (image) => {
-        setActiveImage(image)
-    }
 
     return (
         <div className='product-header'>
             <div className="container">
                 <div className="product-header__wrapper">
                     <div className="product-header__image image-wrapper">
-                        <div className="image-main">
-                            <img src={activeImage} alt={product.title} />
-                        </div>
-                        <div className="image-list">
-                            {
-                                product.images.map((item, key) => (
-                                    <button
-                                        className={`image-list__item ${item === activeImage ? 'image-list__item_active' : ''}`}
-                                        key={key}
-                                        onClick={() => handleImage(item)}
-                                    >
-                                        <img src={item} alt={product.title} />
-                                    </button>
-                                ))
-                            }
-                        </div>
+                        <SliderImages product={product}/>
                     </div>
 
                     <div className="product-header__content content__product-header">

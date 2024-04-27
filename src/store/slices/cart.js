@@ -5,7 +5,7 @@ const initialState = {
     totalPrice: 0,
 }
 
-function setCart(arr){
+function setCart(arr) {
     localStorage.setItem('cart', JSON.stringify(arr))
     return arr
 }
@@ -32,7 +32,7 @@ const cartSlice = createSlice({
             state.items = setCart(newItems);
         },
         removeAll: (state) => {
-            state.items = []
+            state.items = setCart([])
         }
     }
 });

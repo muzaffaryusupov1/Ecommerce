@@ -3,7 +3,7 @@ import { Footer, Header, RegisterModal } from "./components"
 import { routes } from "./utils/routes"
 import { useSelector } from "react-redux"
 import { createPortal } from "react-dom"
-
+import { ToastContainer } from "react-toastify"
 function App() {
 
   const { registerModal } = useSelector(state => state.modals)
@@ -20,7 +20,7 @@ function App() {
       </main>
 
       {registerModal && createPortal(<RegisterModal />, document.querySelector('.wrapper'))}
-
+      <ToastContainer />
       <Footer />
     </>
   )

@@ -20,16 +20,27 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    overflow-x: scroll;
 
-    &::-webkit-scrollbar{
-      background-color: $gray-300;
-      width: 6px;
-      height: 8px;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 7px;
     }
 
-    &::-webkit-scrollbar-thumb{
-      background-color: $gray-400;
-      width: 6px;
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: $gray-200;
+    }
+
+    // /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $gray-400;
+    }
+
+    // /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: $gray-500;
     }
   }
 

@@ -1,0 +1,38 @@
+.not-found__page{
+    margin: 30px 0;
+    &__row{
+        @include center();
+        flex-direction: column;
+        padding: 20px;
+
+        img{
+            width: 800px;
+            height: 400px;
+            margin-bottom: 100px 0;
+        }
+    }
+
+    &__subtitle{
+        font-size: 32px;
+        font-weight: 400;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__btn{
+        background-color: $primary;
+        padding: 12px 24px;
+        color: $white;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        @include trn();
+
+        @include hover{
+            &:hover{
+                background-color: $white;
+                color: $primary;
+                border-color: $primary;
+            }
+        }
+    }
+}

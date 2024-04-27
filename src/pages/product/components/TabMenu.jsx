@@ -1,7 +1,6 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import ProductDescription from "./ProductDescription";
-import ProductReview from "./ProductReview";
 import ProductCharacteristic from "./ProductCharacteristic";
 
 function TabMenu({product}) {
@@ -22,11 +21,6 @@ function TabMenu({product}) {
       name: 'Description',
       tabName: 'description',
     },
-    // {
-    //   id: 2,
-    //   name: 'Review',
-    //   tabName: 'review',
-    // },
     {
       id: 3,
       name: 'Characteristic',
@@ -36,7 +30,6 @@ function TabMenu({product}) {
 
   let tabContent = {
     'description': <ProductDescription product={product}/>,
-    // 'review': <ProductReview />,
     'characteristic': <ProductCharacteristic product={product}/>,
   }
 

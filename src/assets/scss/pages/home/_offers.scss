@@ -125,4 +125,21 @@
             color: #eb001b;
         }
     }
+
+    &-skeleton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 8px 23px 18px 20px;
+        border-left: 1px solid #e0e0e0;
+        
+
+        .top {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 10px;
+        }
+    }
 }

@@ -1,5 +1,6 @@
 .checkout-info {
     &__wrapper {
+        width: 700px;
         background-color: $white;
         border: 1px solid $gray-300;
         height: fit-content;
@@ -23,7 +24,7 @@
 
     &__name,
     &__title,
-    &__pay {
+    &__paytext {
         margin: 7px 0;
         font-size: 16px;
         font-weight: 500;
@@ -31,7 +32,7 @@
     }
 
     &__input {
-        width: 300px;
+        flex: 1 1 auto;
         border: 1px solid $primary;
         margin: 4px 0;
         border-radius: 6px;
@@ -61,5 +62,46 @@
         border: 1px solid $primary;
         width: 30px;
         height: 20px;
+    }
+
+    &__buttons{
+        @include flex(center, space-between)
+    }
+
+    &__back{
+        background-color: $primary;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        padding: 9px 18px;
+        color: $white;
+        @include trn();
+
+        @include hover{
+            &:hover{
+                background-color: transparent;
+                color: $primary;
+                border-color: $primary;
+            }
+        }
+    }
+
+    &__pay{
+        background-color: transparent;
+        border: 1px solid $primary;
+        border-radius: 6px;
+        color: $primary;
+        padding: 9px 16px;
+        @include trn();
+
+        &:disabled{
+            cursor: not-allowed;
+        }
+        
+        @include hover{
+            &:hover{
+                background-color: $primary;
+                color: $white;
+            }
+        }
     }
 }

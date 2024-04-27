@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getBannersList, getCategoriesList, getCategoryRecommendedList, getCategoryRecommendedProducts, getClothes, getProductOffersList, getProductRecommendedList, getSmartphones } from "../actions/homeActions";
+import { getBannersList, getCategoriesList, getCategoryRecommendedList, getCategoryRecommendedProducts, getProductOffersList, getProductRecommendedList, getSmartphones, getTv } from "../actions/homeActions";
 import { buildBuilder } from '../../utils/helpers';
 
 const initialState = {
@@ -31,7 +31,7 @@ const initialState = {
         list: [],
         loading: false
     },
-    clothes: {
+    tv: {
         list: [],
         loading: false
     }
@@ -49,7 +49,7 @@ const homeSlice = createSlice({
         buildBuilder(builder, getCategoryRecommendedList, 'categoryRecommended')
         buildBuilder(builder, getCategoryRecommendedProducts, 'categoryRecommendedProducts')
         buildBuilder(builder, getSmartphones, 'smartphones')
-        buildBuilder(builder, getClothes, 'clothes')
+        buildBuilder(builder, getTv, 'tv')
     }
 })
 

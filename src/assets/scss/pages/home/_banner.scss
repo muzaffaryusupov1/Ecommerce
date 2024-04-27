@@ -86,7 +86,6 @@
         }
 
         &__button {
-            border: 1px solid $white;
             background-color: $white;
             border-radius: 6px;
             padding: 10px 16px;
@@ -97,8 +96,8 @@
 
             @include hover(){
                 &:hover{
-                    background-color: transparent;
-
+                    background-color: $dark;
+                    color: $white;
                 }
             }
         }

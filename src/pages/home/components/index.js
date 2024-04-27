@@ -3,6 +3,6 @@ import Offers from "./offers";
 import Smartphones from "./smartphones";
 import Products from './products'
 import RecommendedList from './recommendedList'
-import Clothes from "./clothes";
+import Tv from "./tv";
 
-export { Banner, Offers, Products, RecommendedList, Smartphones, Clothes }
+export { Banner, Offers, Products, RecommendedList, Smartphones, Tv }
