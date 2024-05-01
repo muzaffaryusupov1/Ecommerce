@@ -28,10 +28,11 @@
         }
 
         &__subtitle {
+            border-radius: 6px;
+            padding: 10px 0;
             font-weight: 400;
-            font-size: 16px;
-            color: $gray-600;
-            padding: 2px 0;
+            font-size: 14px;
+            color: #505050;        
         }
 
         &__link {
