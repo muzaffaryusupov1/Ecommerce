@@ -7,7 +7,7 @@ function FavouritesPage() {
   const { items } = useSelector(state => state.favorite)
 
   const navigate = useNavigate()
-
+  console.log(items)
   const handleHome = () => {
     navigate('/')
   }
@@ -19,10 +19,10 @@ function FavouritesPage() {
           items.length <= 0 ?
             <div className='favourite-page favourite-empty'>
               <div className="favourite-empty__image">
-                <img src="/images/favouriteItems/favourite-empty.png" alt="favourite empty image" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrttyeywkb_T-woGp--6p3lulK4wi4cAb-oB1kyddBgQ&s" alt="favourite empty image" />
               </div>
               <h3 className='favourite-empty__title'>Sevimli mahsulotlar yo'q</h3>
-              <p className='favourite-empty__subtitle'>❤️ ️tugmasi yordamida saralanganlarga mahsulot qoʻshishingiz mumkin.</p>
+              <p className='favourite-empty__subtitle'>❤️ ️tugmasi yordamida saralanganlar mahsulotlar qoʻshishingiz mumkin.</p>
               <button className="favourite-empty__btn" onClick={handleHome}>Orqaga</button>
             </div>
             :

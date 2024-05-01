@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ProductsRightSkeleton from './components/ProductsRightSkeleton'
+import { Link } from 'react-router-dom'
 // import ProductsRightSkeleton from './components/ProductsRightSkeleton'
 
 function ProductsContent({ category }) {
@@ -21,7 +22,9 @@ function ProductsContent({ category }) {
                     </div>
                     <div className="products-content__row">
                         <h2 className='products-content__title'>{category.title}</h2>
-                        <button className='products-content__btn'>Source now</button>
+                        <Link to={`/category/${category.slug}-${category.id}`}>
+                            <button className='products-content__btn'>Hoziroq Ko'rish</button>
+                        </Link>
                     </div>
                 </div>
             }

@@ -31,10 +31,10 @@ function CartList() {
           <span className='cart-back__icon'>
             <ArrowBackIcon />
           </span>
-          Back to shop
+          Bosh Sahifa
         </button>
         <button className='cart-removeall__button' onClick={handleRemoveAll}>
-          Remove all
+          Savatchani Tozalash
         </button>
       </div>
     </div>

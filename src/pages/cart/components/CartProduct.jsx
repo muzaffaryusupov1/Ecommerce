@@ -2,6 +2,7 @@ import React from 'react'
 import { Counter } from '../../../components'
 import { decrement, increment, removeCart } from '../../../store/slices/cart'
 import { useDispatch } from 'react-redux'
+import { DeleteIcon } from '../../../assets/icons'
 
 function CartProduct({ product }) {
   const { id, title, mainImage, model, price, qty } = product
@@ -35,7 +36,7 @@ function CartProduct({ product }) {
             <Counter onIncrement={handleIncrement} onDecrement={handleDecrement} count={qty} />
           </div>
           <div className="cart-product__row">
-            <button className="cart-product__button" onClick={handleRemove}>Remove</button>
+            <button className="cart-product__button" onClick={handleRemove}>O'chirish</button>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ function Header() {
 
     const handleProfile = () => {
         if (isAuth) {
-            navigate('/profile')
+            navigate('/profile/card')
         } else {
             dispatch(modalOpen('registerModal'))
         }
@@ -27,38 +27,42 @@ function Header() {
                                 <MobileIcon />
                             </button>
                             <Link to='/'>
-                                <img src="/images/logo.svg" alt="site logo" />
+                                <img src="/images/logo.png" alt="site logo"  style={{width: 151, height: 46}}/>
                             </Link>
                         </div>
 
                         <form className="header-search">
-                            <input type="text" placeholder='Search...' className="header-search__input" />
-                            <button className="header-search__button">Search</button>
+                            <input type="text" placeholder='Qidirish...' className="header-search__input" />
+                            <button className="header-search__button">Qidirish</button>
                         </form>
 
                         <div className="header-buttons">
-                            <button className="header-button profile">
-                                <span className="header-button__icon" onClick={handleProfile}>
+
+                            <button className="header-button profile" onClick={handleProfile}>
+                                <span className="header-button__icon">
                                     <ProfileIcon />
                                 </span>
-                                <span className="header-button__text">{isAuth ? 'Profile' : 'Register'}</span>
+                                <span className="header-button__text">{isAuth ? 'Profile' : 'Ro\'yhatdan O\'tish'}</span>
                             </button>
+
                             <Link to='/favourites'>
                                 <button className="header-button">
                                     <span className="header-button__icon">
                                         <HeartIcon />
                                     </span>
-                                    <span className="header-button__text">Orders</span>
+                                    <span className="header-button__text">Sevimlilar</span>
                                 </button>
                             </Link>
+
                             <Link to='/cart'>
                                 <button className="header-button">
                                     <span className="header-button__icon">
                                         <CartIcon />
                                     </span>
-                                    <span className="header-button__text">My cart</span>
+                                    <span className="header-button__text">Savatcha</span>
                                 </button>
                             </Link>
+
                         </div>
                     </div>
                 </div>

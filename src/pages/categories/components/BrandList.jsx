@@ -35,13 +35,13 @@ function BrandList() {
     return (
         <div className="category-sidebar__item">
             <div className='category-sidebar__row'>
-                <h2 className="category-sidebar__title">Brands</h2>
+                <h2 className="category-sidebar__title">Brandlar</h2>
                 <span>
                     <ArrowIcon />
                 </span>
             </div>
             <List list={isLong ? brands.list.slice(0, 5) : brands.list} handleBrand={handleBrand} />
-            <button className='category-all__button' onClick={handleSeeAll}>{isLong ? 'See' : 'Close'} all</button>
+            <button className='category-all__button' onClick={handleSeeAll}>{isLong ? 'Ko\'proq' : 'Kamroq'}</button>
         </div >
     )
 }

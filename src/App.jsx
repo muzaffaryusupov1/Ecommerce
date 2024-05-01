@@ -4,6 +4,7 @@ import { routes } from "./utils/routes"
 import { useSelector } from "react-redux"
 import { createPortal } from "react-dom"
 import { ToastContainer } from "react-toastify"
+
 function App() {
 
   const { registerModal } = useSelector(state => state.modals)

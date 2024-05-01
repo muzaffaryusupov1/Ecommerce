@@ -46,7 +46,7 @@ function Footer() {
                 <div className="footer-wrapper">
                     <div className="footer-logo">
                         <Link to={'/'}>
-                            <img src="/images/logo.svg" alt="site logo" />
+                            <img src="/images/logo.png" alt="site logo" style={{width: 151, height: 46}} />
                         </Link>
                         <p className="footer-logo__subtitle">
                             Best information about the company gies here but now lorem ipsum is

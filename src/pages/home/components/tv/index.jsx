@@ -22,6 +22,9 @@ function Tv() {
                             <Link to={`/product/${item.slug}`} key={item.id}>
                                 <div className="recommended-list-item" >
                                     <div className="recommended-list-item__image">
+                                        {item.isOffer ?
+                                            <p className="recommended-list-item__offers">Hafta chegirmalari</p>
+                                            : null}
                                         <img src={item.mainImage} alt={item.title} className='recommended-list-item__img' />
                                     </div>
                                     <div className="recommended-list-item__content">

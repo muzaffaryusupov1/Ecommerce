@@ -1,4 +1,6 @@
 import { CartPage, CategoriesPage, CheckoutPage, FavouritesPage, HomePage, NotFoundPage, ProductPage, ProfilePage } from "../pages";
+import ProfileCard from "../pages/profile/components/ProfileCard";
+import ProfileSetting from "../pages/profile/components/ProfileSetting";
 
 export const routes = [
     {
@@ -32,13 +34,23 @@ export const routes = [
         path: '/favourites'
     },
     {
-        id: 7,
+        id: 8,
         component: <CheckoutPage />,
         path: '/checkout'
     },
     {
-        id: 8,
+        id: 9,
         component: <ProfilePage />,
         path: '/profile'
+    },
+    {
+        id: 10,
+        component: <ProfileSetting />,
+        path: '/profile/setting'
+    },
+    {
+        id: 10,
+        component: <ProfileCard />,
+        path: '/profile/card'
     },
 ]

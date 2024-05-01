@@ -30,10 +30,13 @@ const UserSlice = createSlice({
         },
         setUser: (state, { payload }) => {
             state.user = setUserWithLocale({ ...state.user, ...payload });
+        },
+        setLocale: (state) => {
+            state.user = setUserWithLocale([]);
         }
     }
 })
 
-export const { setIsAuth, setUser } = UserSlice.actions
+export const { setIsAuth, setUser, setLocale } = UserSlice.actions
 
 export default UserSlice.reducer

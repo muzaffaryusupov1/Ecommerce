@@ -1,0 +1,133 @@
+.profile-setting {
+    width: 900px;
+    background-color: $white;
+    border: 1px solid $gray-300;
+    padding: 20px;
+    margin: 24px 0;
+
+    &s {
+        @include center();
+    }
+
+    &__top {
+        margin-bottom: 14px;
+
+        &-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: $dark;
+        }
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    &__label {
+        margin-bottom: 7px;
+        font-size: 14px;
+    }
+
+    &__input {
+        background-color: $white;
+        border: 1px solid $gray-300;
+        border-radius: 4px;
+        color: $dark;
+        font-size: .875rem;
+        font-weight: 400;
+        height: 2.5rem;
+        padding: 0;
+        text-indent: 1rem;
+        width: 300px;
+
+        &:focus {
+            border-color: $dark;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    &__butons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    &__btn {
+        background-color: $white;
+        border: 1px solid $gray-300;
+        color: $dark;
+        cursor: pointer;
+        display: flex;
+        font-size: .875rem;
+        padding: 10px 20px;
+        text-align: center;
+        width: inherit;
+
+        &.selected {
+            background-color: $gray-300;
+        }
+    }
+
+    &__btn1 {
+        background-color: $white;
+        border: 1px solid $red;
+        border-radius: 8px;
+        color: $red;
+        cursor: pointer;
+        display: flex;
+        font-size: .875rem;
+        padding: 10px 20px;
+        text-align: center;
+        width: inherit;
+        @include trn();
+
+        @include hover {
+            &:hover {
+                background-color: $red;
+                color: $white;
+            }
+        }
+
+        &.primary {
+            background-color: $red;
+            color: $white;
+            border-color: $red;
+            @include trn();
+
+            @include hover {
+                &:hover {
+                    background-color: transparent;
+                    color: $red;
+                }
+            }
+        }
+
+        &.selected {
+            background-color: $gray-300;
+        }
+    }
+
+    &__date {
+        width: 300px;
+        border: 1px solid $gray-300;
+        padding: 7px 14px;
+        border-radius: 6px;
+    }
+
+}

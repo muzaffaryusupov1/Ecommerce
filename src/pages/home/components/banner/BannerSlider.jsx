@@ -7,6 +7,8 @@ import Skeleton from "react-loading-skeleton";
 
 function BannerSlider() {
     const { banners } = useSelector(state => state.home)
+    const { categories } = useSelector(state => state.home)
+
 
     return (
         <Swiper className="banner-slider slider-banner" autoplay={{
@@ -26,9 +28,7 @@ function BannerSlider() {
                                 <img src={item.image} alt={item.title} />
                             </div>
                             <div className="slider-slide__content">
-                                <p className="slider-slide__toptitle">{item.toptitle}</p>
                                 <h3 className="slider-slide__title">{item.title}</h3>
-                                <button className="slider-slide__button">Learn more</button>
                             </div>
                         </SwiperSlide>
                     ))

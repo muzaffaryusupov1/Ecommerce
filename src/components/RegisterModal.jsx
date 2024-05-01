@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { CloseIcon } from '../assets/icons'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { modalClose } from '../store/slices/modals'
 import Axios from '../api'
 import { registerUrl } from '../utils/urls'
-import { setIsAuth, setUser } from '../store/slices/user'
+import user, { setIsAuth, setUser } from '../store/slices/user'
+import { toast } from 'react-toastify'
 
 function RegisterModal() {
     const dispatch = useDispatch()
@@ -33,30 +34,29 @@ function RegisterModal() {
                     dispatch(setUser(res.data.data))
                     setLoading(false)
                     handleClose()
+                    toast.success('Akkaunt ochildi')
                 }).catch(err => {
                     setLoading(false)
                     if (err?.response?.status === 401) {
-                        alert('Bunday user bor!!!')
+                        toast.error('Bunday user bor!!!')
                     }
                 });
             } catch (error) {
                 setLoading(false)
                 if (error?.response?.status === 401) {
-                    alert('Bunday user bor!!!')
+                    toast.error('Bunday user bor!!!')
                 }
             }
-
-
-            // dispatch(register(data))
         }
     }
+
 
     return (
         <div className='modal'>
             <div className="modal-bg"></div>
             <div className="modal-panel">
-                <h3 className="modal-panel__title">Create an account</h3>
-                <p className="modal-panel__subtitle">Enter your email and password below to create your account</p>
+                <h3 className="modal-panel__title">Ro'yhatdan o'tish</h3>
+                <p className="modal-panel__subtitle">Hisob qaydnomangizni yaratish uchun quyida elektron pochta va parolingizni kiriting</p>
 
                 <button className='modal-panel__close' onClick={handleClose}>
                     <CloseIcon />
@@ -64,7 +64,7 @@ function RegisterModal() {
 
                 <form className="modal-form" onSubmit={handleFinish}>
                     <div className="modal-form__group">
-                        <label htmlFor="name" className='modal-form__label'>Name</label>
+                        <label htmlFor="name" className='modal-form__label'>Ismingiz</label>
                         <input type="text" className='modal-form__input' name='name' id='name' required minLength={3} />
                     </div>
                     <div className="modal-form__group">
@@ -72,11 +72,11 @@ function RegisterModal() {
                         <input type="email" className='modal-form__input' name='email' id='email' required />
                     </div>
                     <div className="modal-form__group">
-                        <label htmlFor="password" className='modal-form__label'>Password</label>
+                        <label htmlFor="password" className='modal-form__label'>Parol</label>
                         <input type="password" className='modal-form__input' name='password' id='password' minLength={6} required />
                     </div>
                     <div className="modal-form__group">
-                        <button className="modal-form__button" disabled={loading}>{loading ? 'Creating...' : 'Create account'}</button>
+                        <button className="modal-form__button" disabled={loading}>{loading ? 'Ro\'yhatdan O\'tilmoqda...' : 'Ro\'yhatdan O\'tish'}</button>
                     </div>
                 </form>
             </div>

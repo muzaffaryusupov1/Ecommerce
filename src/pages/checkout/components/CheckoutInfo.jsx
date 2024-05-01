@@ -69,13 +69,9 @@ function CheckoutInfo() {
                 setLoading(false)
                 toast.error("Nimadir xato ketti 🔥")
             }
-
-
-            // dispatch(register(data))
         }
-        console.log(data)
     }
-
+    
     return (
         <div className='checkout-info'>
             <div className="checkout-info__top">

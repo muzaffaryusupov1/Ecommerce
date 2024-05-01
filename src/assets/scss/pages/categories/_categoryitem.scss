@@ -17,10 +17,11 @@
 
     position: relative;
     @include flex(center, unset);
-    border-radius: 6px;
-    border: 1px solid $gray-300;
+    border-radius: 12px;
+    border: 1px solid $gray-400;
     padding: 9px;
     @include trn();
+    background-color: $white;
 
 
     &.active {
@@ -62,6 +63,13 @@
         @include flex(center, unset);
         column-gap: 7px;
         padding: 10px 0;
+
+        &.active{
+            align-items: baseline;
+            gap: 4px;
+            padding: 5px 0;
+            flex-direction: column;
+        }
     }
 
     &__price {
@@ -99,6 +107,12 @@
     &__stars {
         @include center();
         position: relative;
+
+        &.active{
+            &::after{
+                display: none;
+            }
+        }
 
         &::after {
             content: "";
@@ -204,9 +218,5 @@
         border: 1px solid $gray-300;
         border-radius: 6px;
         @include trn();
-        
-        &.active{
-            top: 56%;
-        }
     }
 }

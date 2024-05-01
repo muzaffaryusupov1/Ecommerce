@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Skeleton from 'react-loading-skeleton';
+import { useSelector } from 'react-redux';
 
 function OffersContent() {
     const initialTime = {
@@ -32,30 +34,37 @@ function OffersContent() {
         return String(a).padStart('2', '0')
     }
 
-    setInterval(() => generateTime('03/27/2024'), 1000)
+    const { productOffers } = useSelector(state => state.home);
+
+    setInterval(() => generateTime('05/07/2024'), 1000)
     return (
-        <div className="offers-content">
-            <h4 className="offers-title">Deals and offers</h4>
-            <p className="offers-subtitle">Hygiene equipments</p>
-            <div className="offers-time">
-                <div className="offers-time__block">
-                    <span className="offers-time__number">{padString(time.day)}</span>
-                    <span className="offers-time__text">Days</span>
-                </div>
-                <div className="offers-time__block">
-                    <span className="offers-time__number">{padString(time.hour)}</span>
-                    <span className="offers-time__text">Hour</span>
-                </div>
-                <div className="offers-time__block">
-                    <span className="offers-time__number">{padString(time.min)}</span>
-                    <span className="offers-time__text">Mins</span>
-                </div>
-                <div className="offers-time__block">
-                    <span className="offers-time__number">{padString(time.sec)}</span>
-                    <span className="offers-time__text">Sec</span>
-                </div>
-            </div>
-        </div>
+        <>
+            {
+                productOffers.loading ? <Skeleton width={238} height={236} /> :
+                    <div className="offers-content">
+                        <h4 className="offers-title">Hafta chegirmalari</h4>
+                        <p className="offers-subtitle">50% gacha</p>
+                        <div className="offers-time">
+                            <div className="offers-time__block">
+                                <span className="offers-time__number">{padString(time.day)}</span>
+                                <span className="offers-time__text">Kun</span>
+                            </div>
+                            <div className="offers-time__block">
+                                <span className="offers-time__number">{padString(time.hour)}</span>
+                                <span className="offers-time__text">Soat</span>
+                            </div>
+                            <div className="offers-time__block">
+                                <span className="offers-time__number">{padString(time.min)}</span>
+                                <span className="offers-time__text">Min</span>
+                            </div>
+                            <div className="offers-time__block">
+                                <span className="offers-time__number">{padString(time.sec)}</span>
+                                <span className="offers-time__text">Sec</span>
+                            </div>
+                        </div>
+                    </div>
+            }
+        </>
     )
 }
 

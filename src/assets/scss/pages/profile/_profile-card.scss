@@ -1,0 +1,12 @@
+.profile-card {
+    margin: 30px 0;
+
+    &__top {
+        &__title {
+            font-size: 20px;
+            font-weight: 400;
+            color: $dark;
+            line-height: 120%;
+        }
+    }
+}

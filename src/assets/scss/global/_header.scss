@@ -21,7 +21,7 @@
   }
 
   &-search {
-    border: 2px solid $primary;
+    border: 2px solid $red;
     border-radius: 6px;
     width: 520px;
     height: 40px;
@@ -74,8 +74,8 @@
     &__button {
       width: 100px;
       height: 100%;
-      background-color: $primary;
-      border-left: 2px solid $primary;
+      background-color: $red;
+      border-left: 2px solid $red;
       @include center();
       font-weight: 500;
       font-size: 16px;
@@ -85,7 +85,7 @@
       @include hover() {
         &:hover {
           background-color: transparent;
-          color: $primary;
+          color: $red;
         }
       }
     }

@@ -6,7 +6,6 @@ import { addCart } from '../../../store/slices/cart'
 
 function FavouriteItems({ product }) {
   const { id, title, mainImage, model, price, qty } = product
-  console.log(product)
   const dispatch = useDispatch()
 
   const {like, setLike} = useState(false);
@@ -14,6 +13,7 @@ function FavouriteItems({ product }) {
   function likeItems(){
     setLike(true)
   }
+  
 
   const handleUnFavourite = () => {
     dispatch(removeFavorite(id))
@@ -31,7 +31,7 @@ function FavouriteItems({ product }) {
         </div>
 
         <div className="favourite-items__content">
-          <p className="favourite-items__price">${price.toLocaleString()}</p>
+          <p className="favourite-items__price">${price?.toLocaleString()}</p>
           <ul className='favourite-items__list'>
             <li>
               <RatingIcon />

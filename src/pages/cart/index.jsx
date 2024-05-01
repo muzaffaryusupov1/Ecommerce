@@ -29,7 +29,7 @@ function CartPage() {
             </div>
             :
             <>
-              <h1 className='cart-page__title'>My cart (3)</h1>
+              <h1 className='cart-page__title'>Savatcha ({items.length})</h1>
               <div className="cart-page__row">
                 <CartList />
                 <div className="cart-info">

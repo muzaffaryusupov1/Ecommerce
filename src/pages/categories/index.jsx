@@ -16,6 +16,7 @@ function CategoriesPage() {
   const [searchParams, setSearchParams] = useSearchParams()
   let fitleredBrands = getIds(searchParams.get('brand_id'))
   let sortBy = searchParams.get('sortBy')
+  const { product, loading } = useSelector(state => state.product)
 
   const handleBrandDelete = (id) => {
     searchParams.set('brand_id', fitleredBrands.filter(item => item !== id).join(','))
@@ -79,7 +80,7 @@ function CategoriesPage() {
 
             </div>
 
-            <CategoryItems active={active} />
+            <CategoryItems product={product} active={active} />
 
             <div className='categories-page__bottom'>
               <select id='categories-select' className='categories-page__select'>

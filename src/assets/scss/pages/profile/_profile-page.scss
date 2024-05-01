@@ -1,0 +1,21 @@
+.profile{
+
+    &-wrapper{
+        display: flex;
+    }
+
+    &-sidebar{
+        width: 300px;
+        height: 100%;
+        padding: 30px 15px;
+
+        &_link{
+            font-size: 16px;
+            font-weight: 500;
+            color: $dark;
+            &:not(:last-child){
+                margin-bottom: 14px;
+            }
+        }
+    }
+}
