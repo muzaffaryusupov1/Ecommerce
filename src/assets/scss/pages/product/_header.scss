@@ -8,10 +8,27 @@
         padding: 20px;
         display: flex;
         column-gap: 20px;
+
+        @include media(890) {
+            column-gap: 15px;
+
+            @include media(850) {
+                column-gap: 12px;
+                flex-direction: column;
+            }
+        }
     }
 
     &__content {
         max-width: 430px;
+
+        @include media(890) {
+            max-width: 395px;
+
+            @include media(850) {
+                max-width: 500px;
+            }
+        }
     }
 
 
@@ -55,7 +72,7 @@
                     object-fit: contain;
                 }
 
-                &_active{
+                &_active {
                     border: 1px solid $primary;
                 }
             }
@@ -65,8 +82,8 @@
     .content {
         &-title {
             font-weight: 600;
-            font-size: 20px;
-            line-height: 140%;
+            @include adaptive-value('font-size', 20, 11);
+            @include adaptive-value('line-height', 140%, 110%);
             letter-spacing: -0.01em;
             color: $dark;
             margin-bottom: 8px;
@@ -76,23 +93,35 @@
             display: flex;
             margin-bottom: 14px;
 
+            @include media(850) {
+                gap: 40px;
+
+                @include media(450) {
+                    gap: 10px;
+                }
+
+                @include media(400) {
+                    gap: 0;
+                }
+            }
+
             &__text {
                 font-weight: 400;
-                font-size: 16px;
+                @include adaptive-value('font-size', 16, 9);
                 color: #787a80;
             }
 
             &__icon {
-                width: 20px;
-                height: 20px;
+                @include adaptive-value('width', 20, 14);
+                @include adaptive-value('height', 20, 14);
             }
 
             &__col {
                 position: relative;
 
                 &:not(:last-child) {
-                    padding-right: 20px;
-                    margin-right: 12px;
+                    @include adaptive-value('padding-right', 20, 11);
+                    @include adaptive-value('margin-right', 12, 9);
 
                     &::after {
                         content: '';
@@ -117,10 +146,15 @@
                 }
             }
 
+            @include media(400) {
+                width: 14px;
+                height: 14px;
+            }
+
             &s {
                 &__title {
                     font-weight: 400;
-                    font-size: 16px;
+                    @include adaptive-value('font-size', 16, 12);
                     color: $orange;
                 }
             }
@@ -136,15 +170,15 @@
             margin-bottom: 8px;
 
             &__old {
-                font-size: 14px;
-                line-height: 20px;
+                @include adaptive-value('font-size', 14, 11);
+                @include adaptive-value('line-height', 20, 16);
                 text-decoration-line: line-through;
                 color: #ffbc59;
             }
 
             &__new {
-                font-size: 24px;
-                line-height: 30px;
+                @include adaptive-value('font-size', 24, 16);
+                @include adaptive-value('line-height', 30, 18);
                 color: $orange;
                 font-weight: bold;
             }
@@ -156,7 +190,7 @@
             margin-bottom: 14px;
             border-top: 1px solid #e0e0e0;
             border-bottom: 1px solid #e0e0e0;
-            max-width: 70%;
+            @include adaptive-value('max-width', 70%, 50%);
 
             &__item {
                 display: flex;
@@ -173,8 +207,8 @@
             }
 
             &__text {
-                font-size: 16px;
-                line-height: 110%;
+                @include adaptive-value('font-size', 16, 12);
+                @include adaptive-value('line-height', 110%, 90%);
                 color: $dark;
             }
         }
@@ -182,12 +216,11 @@
         &-button {
             border-radius: 6px;
             padding: 0px 16px;
-            width: 248px;
             height: 40px;
-            padding: 10px;
-
+            @include adaptive-value('padding', 10, 6);
+            @include adaptive-value('font-size', 16, 11);
+            @include adaptive-value('width', 248, 200);
             font-weight: 500;
-            font-size: 16px;
             text-align: center;
 
             &__primary {
@@ -214,6 +247,10 @@
             &s {
                 display: flex;
                 column-gap: 8px;
+
+                @include media(850) {
+                    column-gap: 20px;
+                }
             }
 
 

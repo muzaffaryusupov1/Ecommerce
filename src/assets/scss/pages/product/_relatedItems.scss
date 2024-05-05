@@ -4,7 +4,7 @@
   &-top {
     &__title {
       font-weight: 600;
-      font-size: 20px;
+      @include adaptive-value('font-size', 20, 14);
       line-height: 140%;
       letter-spacing: -0.01em;
       color: $dark;
@@ -15,12 +15,18 @@
     margin-top: 20px;
     display: flex;
     align-items: center;
-    gap: 25px;
+    @include adaptive-value('gap', 25, 14);
+
+    @include media(1170){
+      overflow-x: scroll; 
+    }
   }
 
   &__item {
     @include center();
     flex-direction: column;
+    @include adaptive-value('width', 216, 160);
+    @include adaptive-value('height', 280, 230);
     width: 216px;
     height: 280px;
     padding: 5px 0;
@@ -30,9 +36,9 @@
 
     &__image {
       border-radius: 6px;
-      width: 180px;
-      height: 180px;
-      padding: 10px;
+      @include adaptive-value('width', 180, 130);
+      @include adaptive-value('height', 180, 130);
+      @include adaptive-value('padiing', 10, 6);
       margin-bottom: 10px;
 
       img {
@@ -43,22 +49,23 @@
     }
 
     &__title {
+      @include adaptive-value('font-size', 16, 11);
       font-weight: 400;
-      font-size: 16px;
       color: $gray-600;
     }
 
     &__price {
       font-weight: 400;
-      font-size: 16px;
+      @include adaptive-value('font-size', 16, 11);
       color: $gray-500;
     }
   }
 
   &__titles {
-    padding: 0 13px;
     display: flex;
     flex-direction: column;
     gap: 9px;
+    @include adaptive-value('padding-right', 13, 9);
+    @include adaptive-value('padding-left', 13, 9);
   }
 }

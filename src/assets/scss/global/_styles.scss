@@ -55,6 +55,10 @@
     padding: 10px 0;
     transition: all 0.2s ease-in-out;
 
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+
     &:hover {
         .swiper-button-next {
             color: black;
@@ -103,21 +107,51 @@
 .swiper-button-next {
     color: black;
     display: none;
+
+    @media screen and (max-width: 850px) {
+        display: block;
+    }
 }
 
 .swiper-button-prev {
     color: black;
     display: none;
+
+    @media screen and (max-width: 850px) {
+        display: block;
+    }
 }
 
 .slider {
     width: 400px;
     height: 500px;
 
+    @media screen and (max-width: 850px) {
+        width: 100%;
+        height: 360px;
+        background-color: #fff;
+        border: 1px solid #dee2e7;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 450px) {
+            width: 300px;
+            padding: 20px;
+        }
+    }
+
     &-main__images {
         width: 370px;
         height: 380px;
         padding: 10px;
+
+        @media screen and (max-width: 850px) {
+            width: 340px;
+
+            @media screen and (max-width: 450px) {
+                width: 200px;
+                padding: 0;
+            }
+        }
 
         img {
             width: 100%;

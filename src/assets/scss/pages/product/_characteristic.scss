@@ -1,26 +1,26 @@
-.characteristic{
+.characteristic {
     width: 100%;
 
-    &-list{
-        &__item{
+    &-list {
+        &__item {
             width: 100%;
             @include flex(center, space-between);
-            padding: 12px;
+            @include adaptive-value('padding', 12, 8);
             border-radius: 4px;
 
-            span{
-                font-size: 16px;
+            span {
+                @include adaptive-value('font-size', 16, 11);
                 color: #858997;
             }
 
-            &:nth-child(odd){
-                background-color: rgba(0,0,0,.05);
+            &:nth-child(odd) {
+                background-color: rgba(0, 0, 0, .05);
             }
-            
+
         }
     }
 
-    &-value{
+    &-value {
         color: $primary !important;
     }
 }

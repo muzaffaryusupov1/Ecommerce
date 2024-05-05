@@ -32,7 +32,7 @@ function Header() {
                                 <MobileIcon />
                             </button>
                             <Link to='/'>
-                                <img src="/images/logo.png" alt="site logo"  style={{width: 151, height: 46}}/>
+                                <img className='header-icon' src="/images/logo.png" alt="site logo" />
                             </Link>
                         </div>
 

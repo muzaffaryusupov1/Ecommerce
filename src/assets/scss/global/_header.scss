@@ -10,6 +10,7 @@
   &-logo {
     display: flex;
     gap: 18px;
+    @include adaptive-value('gap', 18, 4);
   }
 
   &-mobile__btn {
@@ -17,7 +18,19 @@
 
     @include media(720) {
       display: block;
+      @include adaptive-value('width', 24, 17);
+      @include adaptive-value('height', 30, 22);
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
+  }
+
+  &-icon {
+    @include adaptive-value('width', 151, 88);
+    @include adaptive-value('height', 46, 28);
   }
 
   &-search {
