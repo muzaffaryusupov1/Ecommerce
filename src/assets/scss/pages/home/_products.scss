@@ -6,6 +6,12 @@
         background-color: $white;
         display: flex;
         height: 257px;
+
+        @include media(750) {
+            flex-direction: column;
+            background-color: transparent;
+            border: none;
+        }
     }
 
     &-content {
@@ -14,6 +20,12 @@
         height: 100%;
         padding: 20px;
 
+        @include media(750) {
+            padding: 0 20px;
+            width: 100%;
+            margin: 10px 0 30px 0;
+        }
+
         &__image {
             position: absolute;
             top: 0;
@@ -21,7 +33,11 @@
             width: 100%;
             height: 100%;
 
-            &::after{
+            @include media(750) {
+                display: none;
+            }
+
+            &::after {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -52,6 +68,11 @@
             letter-spacing: -0.02px;
             color: $white;
             margin-bottom: 18px;
+
+            @include media(750) {
+                color: $dark;
+                font-size: 20px;
+            }
         }
 
         &__btn {
@@ -64,6 +85,10 @@
             line-height: 19px;
             color: $dark;
             @include trn();
+
+            @include media(750) {
+                display: none;
+            }
 
             @include hover() {
                 &:hover {
@@ -80,16 +105,51 @@
         display: flex;
         border: 1px solid $gray-300;
 
+        @include media(750) {
+            @include center();
+            flex-direction: column-reverse;
+            width: 160px;
+            height: 173px;
+            background-color: $white;
+        }
+
         &__row {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             width: 930px;
+
+            @include media(1210) {
+                width: 900px;
+                flex-direction: column;
+                overflow-x: scroll;
+
+                @include media(1130) {
+                    width: 850px;
+                }
+
+                @include media(1030) {
+                    width: 720px;
+                }
+
+                @include media(930) {
+                    width: 600px;
+                }
+
+                @include media(750) {
+                    width: 100%;
+                    max-height: 100% !important;
+                }
+            }
         }
 
         &__contents {
             width: 127px;
             padding: 20px 0 0 16px;
+
+            @include media(750) {
+                padding: 5px 9px;
+            }
         }
 
         &__title {
@@ -98,6 +158,11 @@
             line-height: 19px;
             color: $dark;
             margin-bottom: 9px;
+
+            @include media(750) {
+                font-size: 11px;
+                margin-bottom: 4px;
+            }
         }
 
         &__subtitle {
@@ -106,12 +171,21 @@
             font-size: 13px;
             line-height: 15px;
             color: $gray-500;
+
+            @include media(750) {
+                font-size: 11px;
+            }
         }
 
         &__image {
             width: 95px;
             height: 95px;
             margin-top: 15px;
+
+            @include media(750) {
+                height: 85px;
+                margin: 3px 0;
+            }
 
             img {
                 width: 100%;

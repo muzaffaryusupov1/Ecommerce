@@ -1,69 +1,196 @@
 .recommended-list {
     margin: 24px 0;
 
-    &-top{
-        margin-bottom: 24px;
-        &__title{
+    &-top {
+        @include adaptive-value('font-size', 24, 16);
+
+        &__title {
             font-weight: 600;
-            font-size: 24px;
-            line-height: 32px;
+            @include adaptive-value('font-size', 24, 16);
+            @include adaptive-value('line-height', 32, 20);
             letter-spacing: -0.2px;
         }
     }
 
-    
-    &-item{
+
+    &-item {
         background-color: $white;
         overflow: hidden;
         border: 1px solid $gray-300;
         width: 220px;
-        height: 310px;
+        height: 320px;
         padding: 17px 17px 8px 17px;
         position: relative;
         border-radius: 12px;
-        
-        &s{
+
+        @include media(970) {
+            width: 210px;
+
+            @include media(930) {
+                width: 200px;
+            }
+
+            @include media(890) {
+                width: 220px;
+            }
+
+            @include media(730) {
+                width: 300px;
+            }
+
+            @include media(650) {
+                width: 270px;
+            }
+
+            @include media(592) {
+                width: 250px;
+
+                @include media(550) {
+                    width: 230px;
+                }
+
+                @include media(510) {
+                    width: 200px;
+                    border-radius: 10px;
+                    height: 300px;
+                }
+
+                @include media(450) {
+                    width: 180px;
+                    border-radius: 8px;
+                    height: 300px;
+                }
+
+                @include media(410) {
+                    width: 160px;
+                    padding: 14px 13px 5px 14px;
+                    border-radius: 6px;
+                    margin-top: 10px;
+                    height: 290px;
+                }
+
+                @include media(371) {
+                    width: 150px;
+                }
+
+                @include media(352) {
+                    width: 140px;
+                }
+
+                @include media(332) {
+                    width: 130px;
+                    height: 240px;
+                    padding: 9px;
+                }
+
+            }
+        }
+
+        &s {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             height: inherit;
         }
-        
-        &__image{
+
+        &__image {
             width: 200px;
             height: 200px;
             padding: 14px 24px;
             margin-bottom: 12px;
-            
-            img{
+
+            @include media(930) {
+                width: 180px;
+
+                @include media(990) {
+                    width: 160px;
+                }
+
+                @include media(890) {
+                    width: 190px;
+                }
+
+                @include media(730) {
+                    width: 260px;
+                }
+
+                @include media(650) {
+                    width: 240px;
+                }
+
+                @include media(592) {
+                    width: 220px;
+
+                    @include media(550) {
+                        width: 210px;
+                    }
+
+                    @include media(510) {
+                        width: 190px;
+                    }
+
+                    @include media(450) {
+                        width: 160px;
+                    }
+
+                    @include media(410) {
+                        width: 140px;
+                    }
+
+                    @include media(352) {
+                        width: 130px;
+                    }
+
+                    @include media(332) {
+                        width: 100px;
+                        height: 160px;
+                        padding: 10px 12px;
+                        margin: 0;
+                    }
+                }
+            }
+
+            img {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
             }
         }
 
-        &__price{
+        &__content {
+            @include media(332) {
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__price {
             font-weight: 500;
-            font-size: 16px;
+            @include adaptive-value('font-size', 16, 11);
             line-height: 22px;
             color: $dark;
         }
-        
-        &__subtitle{
+
+        &__subtitle {
             font-weight: 400;
-            font-size: 16px;
+            @include adaptive-value('font-size', 16, 11);
             line-height: 24px;
             letter-spacing: -0.2px;
             color: $gray-500;
             margin: 5px 0;
         }
 
-        &__offers{
+        &__offers {
             position: absolute;
             top: 10px;
             left: 10px;
             background-color: $orange;
             color: $white;
+            @include adaptive-value('padding-top', 4, 2);
+            @include adaptive-value('padding-right', 8, 3);
+            @include adaptive-value('padding-bottom', 4, 2);
+            @include adaptive-value('padding-left', 8, 3);
+            @include adaptive-value('font-size', 16, 8);
             padding: 4px 8px;
             border-radius: 9px;
         }

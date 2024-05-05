@@ -25,6 +25,11 @@ import ChevronRightIcon from "./ChevronRightIcon";
 import ChevronLeftIcon from "./ChevronLeftIcon";
 import ListViewIcon from "./ListViewIcon";
 import DeleteIcon from "./DeleteIcon";
+import SignIcon from "./SignIcon";
+import HomeIcon from "./HomeIcon";
+import CategoriesIcon from "./CategoriesIcon";
+import OrdersIcon from "./OrdersIcon";
+import InventorIcon from "./InventorIcon";
 
 export {
     ProfileIcon, CartIcon, MessageIcon,
@@ -39,5 +44,6 @@ export {
     GridViewIcon,
     ChevronLeftIcon, ChevronRightIcon,
     ListViewIcon,
-    DeleteIcon
+    DeleteIcon,
+    SignIcon, HomeIcon, CategoriesIcon, OrdersIcon, InventorIcon
 }

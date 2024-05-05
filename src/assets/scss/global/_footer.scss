@@ -6,6 +6,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @include media(1015) {
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
   }
 
   &-logo {
@@ -31,6 +36,16 @@
   &-main {
     display: flex;
     gap: 64px;
+
+    @include media(850) {
+      flex-wrap: wrap;
+      margin: 20px 0;
+      gap: 50px;
+
+      @include media(550) {
+        gap: 30px;
+      }
+    }
   }
 
   &-links {
@@ -88,6 +103,7 @@
   &-bottom {
     border-top: 1px solid $gray-300;
     background: $gray-200;
+
     &__row {
       @include flex(center, space-between);
       padding: 23px 0;

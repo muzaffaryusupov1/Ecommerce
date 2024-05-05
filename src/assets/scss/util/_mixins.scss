@@ -23,3 +23,14 @@
         @content;
     }
 }
+
+@mixin adaptive-value($property, $starSize, $minSize) {
+    $addSize: $starSize - $minSize;
+    #{$property}: $starSize + px;
+    @media (max-width:#{1280 + px}) {
+        #{$property}: calc(
+            #{$minSize + px} + #{$addSize} *
+              ((100vw - 320px) / #{1280 - 320})
+        );
+    }
+}

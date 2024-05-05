@@ -19,7 +19,7 @@ function ProductsCard({ list }) {
                     <Link key={item.id} to={`/product/${item.slug}`}>
                         <div className="products-card">
                             <div className="products-card__contents">
-                                <p className="products-card__title">{item.title}</p>
+                                <p className="products-card__title">{item.title.split(' ').slice(0, 4).join(' ')}</p>
                                 <small className='products-card__subtitle'>{item.price.toLocaleString()} UZS</small>
                             </div>
                             <div className="products-card__image">

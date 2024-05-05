@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { MobileIcon, SearchIcon } from '../../assets/icons'
 import { useDispatch, useSelector } from 'react-redux'
 import { modalOpen } from '../../store/slices/modals'
+import { categoriesModalOpen } from '../../store/slices/categoriesmodal'
 
 function Header() {
     const { isAuth } = useSelector(state => state.user)
@@ -17,13 +18,17 @@ function Header() {
         }
     }
 
+    const handleModal = () => {
+        dispatch(categoriesModalOpen('registerCategoriesModal'))
+    }
+
     return (
         <header className='header'>
             <div className="header-top">
                 <div className="container">
                     <div className="header-row">
                         <div className="header-logo">
-                            <button className='header-mobile__btn'>
+                            <button className='header-mobile__btn' onClick={handleModal}>
                                 <MobileIcon />
                             </button>
                             <Link to='/'>

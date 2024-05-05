@@ -28,7 +28,7 @@ function Tv() {
                                         <img src={item.mainImage} alt={item.title} className='recommended-list-item__img' />
                                     </div>
                                     <div className="recommended-list-item__content">
-                                        <p className="recommended-list-item__subtitle">{item.title.split(' ').slice(0, 3).join(' ')}</p>
+                                        <p className="recommended-list-item__subtitle">{item.title.split(' ').slice(0, 2).join(' ')}</p>
                                         <p className="recommended-list-item__price">{item.price.toLocaleString()} UZS</p>
                                     </div>
                                 </div>

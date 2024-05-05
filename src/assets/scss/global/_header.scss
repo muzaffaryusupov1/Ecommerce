@@ -98,21 +98,18 @@
     flex-direction: column;
     row-gap: 6px;
 
-    &.profile,
-    &.message {
-      @include media(450) {
-        display: none
-      }
-    }
-
     &s {
       @include flex(center);
-      column-gap: 24px;
+      @include adaptive-value('column-gap', 24, 10);
+    }
+
+    &__icon {
+      @include adaptive-value('width', 24, 16);
     }
 
     &__text {
       font-weight: 400;
-      font-size: 12px;
+      @include adaptive-value('font-size', 12, 8);
       @include trn();
     }
 

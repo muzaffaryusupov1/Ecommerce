@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { CloseIcon } from '../assets/icons'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { modalClose } from '../store/slices/modals'
 import Axios from '../api'
 import { registerUrl } from '../utils/urls'
-import user, { setIsAuth, setUser } from '../store/slices/user'
+import { setIsAuth, setUser } from '../store/slices/user'
 import { toast } from 'react-toastify'
 
 function RegisterModal() {

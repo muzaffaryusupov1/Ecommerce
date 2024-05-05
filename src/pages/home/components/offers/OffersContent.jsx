@@ -42,8 +42,10 @@ function OffersContent() {
             {
                 productOffers.loading ? <Skeleton width={238} height={236} /> :
                     <div className="offers-content">
-                        <h4 className="offers-title">Hafta chegirmalari</h4>
-                        <p className="offers-subtitle">50% gacha</p>
+                        <div>
+                            <h4 className="offers-title">Hafta chegirmalari</h4>
+                            <p className="offers-subtitle">50% gacha</p>
+                        </div>
                         <div className="offers-time">
                             <div className="offers-time__block">
                                 <span className="offers-time__number">{padString(time.day)}</span>

@@ -6,6 +6,7 @@ import products from "./slices/products";
 import favorite from "./slices/favorite";
 import modals from "./slices/modals";
 import user from "./slices/user";
+import categoriesmodal from "./slices/categoriesmodal";
 
 export const store = configureStore({
     reducer: {
@@ -15,6 +16,7 @@ export const store = configureStore({
         favorite,
         products,
         modals,
-        user
+        user,
+        categoriesmodal
     }
 })

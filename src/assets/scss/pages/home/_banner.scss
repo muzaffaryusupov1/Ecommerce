@@ -15,11 +15,19 @@
         max-width: calc(100% - 250px);
         flex: 1 1 auto;
         height: 100%;
+
+        @include media(720) {
+            max-width: 100%;
+        }
     }
 
     &-categories {
         width: 250px;
         height: 100%;
+
+        @include media(720) {
+            display: none;
+        }
     }
 }
 
@@ -94,8 +102,8 @@
             color: $dark;
             @include trn();
 
-            @include hover(){
-                &:hover{
+            @include hover() {
+                &:hover {
                     background-color: $dark;
                     color: $white;
                 }

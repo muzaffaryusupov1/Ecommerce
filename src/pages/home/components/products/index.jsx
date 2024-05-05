@@ -8,7 +8,7 @@ function Products({category, list}) {
       <div className="container">
         <div className="products-wrapper">
           <ProductsContent category={category}/>
-          <ProductsCard  list={list}/>
+          <ProductsCard  list={list.slice(0, 8)}/>
         </div>
       </div>
     </section>
